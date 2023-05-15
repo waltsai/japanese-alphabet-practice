@@ -264,6 +264,13 @@ function submitAnswer(ele) {
             if (document.getElementById('current').style.backgroundColor !== 'darkred') {
                 document.getElementById('current').style.backgroundColor = "palegreen";
             }
+
+            const clone = document.createElement("div");
+            clone.className = "alphabet-answer";
+            clone.innerHTML = pointer[document.getElementById('current').innerText];
+            document.getElementById('current').appendChild(clone);
+
+            document.getElementById('current')
             document.getElementById('valInput').classList.remove('is-invalid');
             document.getElementById('hint').innerText = "";
             hintCount = 0;
@@ -272,6 +279,7 @@ function submitAnswer(ele) {
             document.getElementById('current').style.backgroundColor = "darkred";
             document.getElementById('current').classList.add('error');
             document.getElementById('valInput').classList.add('is-invalid');
+            document.getElementById('valInput').value = "";
 
             const word = pointer[document.getElementById('current').innerText].toString();
             if (hintCount < 2) {
