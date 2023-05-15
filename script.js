@@ -261,7 +261,9 @@ let hintCount = 0;
 function submitAnswer(ele) {
     if (event.key === 'Enter') {
         if (document.getElementById('valInput').value === pointer[document.getElementById('current').innerText]) {
-            document.getElementById('current').style.backgroundColor = "palegreen";
+            if (document.getElementById('current').style.backgroundColor !== 'darkred') {
+                document.getElementById('current').style.backgroundColor = "palegreen";
+            }
             document.getElementById('valInput').classList.remove('is-invalid');
             document.getElementById('hint').innerText = "";
             hintCount = 0;
@@ -280,7 +282,7 @@ function submitAnswer(ele) {
             hintCount++;
             // remove the class after the animation completes
             setTimeout(function () {
-                document.getElementById('valInput').classList.remove('error');
+                document.getElementById('current').classList.remove('error');
             }, 300);
 
             ele.preventDefault();
