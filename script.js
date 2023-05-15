@@ -286,6 +286,7 @@ function submitAnswer(ele) {
 
             ele.preventDefault();
         }
+        
         document.getElementById('valInput').value = "";
     }
 }
