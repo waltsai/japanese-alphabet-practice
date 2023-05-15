@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>平片仮名練習</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">
+            <img src="icon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            平片仮名練習
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <button class="nav-link" style="border-width: 0px; background-color: transparent" onclick="toHir()">
+                        平假名轉拼音
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" style="border-width: 0px; background-color: transparent" onclick="toKat()">
+                        片假名轉拼音
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" style="border-width: 0px; background-color: transparent"
+                            onclick="toBoth()">
+                        綜合練習
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="question-list" id="list"></div>
+<input type="text" aria-label="First name" class="form-control inputbox" id="valInput" onkeydown="submitAnswer(this)"
+       required>
+<span id="hint"></span>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+<script>
+    window.addEventListener("load", function () {
+        cloneBlocks();
+    });
+</script>
+</body>
+</html>
