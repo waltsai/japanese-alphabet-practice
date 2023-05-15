@@ -270,7 +270,7 @@ function submitAnswer(ele) {
             slide()
         } else {
             document.getElementById('current').style.backgroundColor = "darkred";
-            document.getElementById('valInput').classList.add('error');
+            document.getElementById('current').classList.add('error');
             document.getElementById('valInput').classList.add('is-invalid');
 
             const word = pointer[document.getElementById('current').innerText].toString();
@@ -280,7 +280,6 @@ function submitAnswer(ele) {
                 document.getElementById('hint').innerText = "你已經連續答錯三次! 答案為 " + word;
             }
             hintCount++;
-            // remove the class after the animation completes
             setTimeout(function () {
                 document.getElementById('current').classList.remove('error');
             }, 300);
