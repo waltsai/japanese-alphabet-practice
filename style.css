@@ -14,7 +14,7 @@
 }
 
 .error {
-    position: fixed;
+    position: relative;
     animation: shake .1s ease-in-out;
     animation-iteration-count: 3;
 }
